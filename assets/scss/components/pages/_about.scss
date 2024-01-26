@@ -1,0 +1,44 @@
+.about-header{
+    background:  linear-gradient(to bottom, rgba(0,0,0,0.8), black),
+        url("../img/about-us/noom-peerapong-2uwFEAGUm6E-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: 80% 40%;
+    background-size: cover;
+    height: 70vh;
+}
+
+.about-img{
+    position: relative;
+    .border-img{
+        width: 290px; 
+        height: 300px; 
+        position: absolute; 
+        z-index: 2; 
+        top: 10px;
+        border: 1px solid var(--main-color) !important;
+    }
+    img{
+        height: 300px !important;
+       
+    }
+}
+.card{
+    height: 400px;
+    .img-team{
+        display: inline-block;
+        overflow: hidden; 
+        height: 400px;
+        .card-img-top{
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: all 650ms ease-in-out;
+        }  
+        &:hover{
+            > .card-img-top{
+                transform: scale(1.1);
+                transform-origin: 50% 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,526 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body {
+  background-color: var(--black-color);
+  scrollbar-width: thick;
+  scrollbar-color: var(--main-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--black-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 6px;
+  border: 3px solid var(--black-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.h-border {
+  width: 50px;
+  border-radius: 10px;
+  border: 3px solid var(--main-color);
+  opacity: 1 !important;
+}
+
+.nav-link, h2, h3, h5, h4 {
+  font-family: var(--primary-font);
+}
+
+p, a, button {
+  font-family: var(--second-font);
+}
+
+header .navbar {
+  background-color: var(--black-color);
+  box-shadow: 20px 20px 30px rgb(21, 20, 20);
+}
+header .navbar .navbar-toggler {
+  background-color: var(--main-color);
+}
+header .navbar .offcanvas {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+header .navbar .offcanvas .offcanvas-header .offcanvas-title {
+  color: var(--main-color);
+}
+header .navbar .offcanvas .offcanvas-header .btn-close {
+  background-color: var(--white-color) !important;
+  opacity: 1;
+}
+header .navbar .offcanvas .offcanvas-body .nav-link {
+  color: var(--white-color) !important;
+}
+header .navbar .offcanvas .offcanvas-body .nav-link:hover {
+  color: var(--main-color) !important;
+}
+header .navbar .offcanvas .offcanvas-body .dropdown-menu .dropdown-item:hover {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+header .navbar .nav .nav-link {
+  color: var(--white-color) !important;
+  cursor: pointer;
+}
+header .navbar .nav .nav-link .fa-circle-user {
+  font-size: 25px;
+  color: var(--main-color);
+}
+header .modal form input {
+  background-color: var(--input-color) !important;
+  color: var(--main-color) !important;
+  border-radius: 0;
+}
+header .modal form input:focus {
+  border: 1px solid var(--main-color) !important;
+}
+header .modal form input::placeholder {
+  color: var(--main-color) !important;
+}
+header .modal .btn-close:focus {
+  box-shadow: none !important;
+}
+header #search .modal-content {
+  background-color: rgba(79, 75, 75, 0.3);
+}
+header #search input {
+  border-radius: 7px !important;
+}
+
+@media screen and (max-width: 764px) {
+  .logo {
+    width: 100px !important;
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+footer {
+  overflow-x: hidden;
+}
+footer p i:hover {
+  color: var(--main-color);
+}
+footer ul li {
+  list-style-type: none;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--main-color) !important;
+}
+footer p, footer i, footer a, footer h3, footer div {
+  color: var(--white-color);
+}
+
+/*=============== GOOGLE FONTS ===============*/
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --white-color: #FFF;
+  --black-color: #1e1d1d;
+  --main-color: #549bf7;
+  --input-color:#fafafa;
+  /*========== transition ==========*/
+  --transition: all .2s ease-out;
+  /*========== shadows ==========*/
+  --box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
+  /*========== Font and typography ==========*/
+  --primary-font: "Orbitron", sans-serif;
+  --second-font: "Roboto Slab", serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.owl-nav .owl-prev {
+  position: absolute;
+  top: calc(40% - 25px);
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+  color: var(--main-color) !important;
+  left: 0;
+}
+.owl-nav .owl-next {
+  position: absolute;
+  top: calc(40% - 25px);
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+  color: var(--main-color) !important;
+  right: 0;
+}
+
+/* .owl-dots {
+    text-align: center;
+}
+
+.owl-dots .owl-dot {
+    height: 5px;
+    width: 10px;
+    border-radius: 10px;
+    background: #ccc !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    outline: none;
+}
+
+.owl-dots .owl-dot.active {
+    background: var(--main-color) !important;
+} */
+.slider-card .d-flex {
+  position: relative;
+}
+.slider-card .d-flex img {
+  height: 500px;
+}
+.slider-card .d-flex .gradient {
+  width: 100% !important;
+  height: 100%;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), black);
+  opacity: 1;
+  position: absolute;
+}
+.slider-card .d-flex .info {
+  position: absolute;
+  z-index: 1;
+}
+
+@media screen and (max-width: 764px) {
+  p.w-50 {
+    width: 75% !important;
+  }
+}
+h2 {
+  color: var(--white-color);
+}
+
+form input, form select {
+  background-color: var(--input-color) !important;
+  color: var(--main-color) !important;
+  border-radius: 0;
+}
+form input:focus, form select:focus {
+  border: 1px solid var(--main-color) !important;
+}
+
+@media screen and (max-width: 764px) {
+  .login, .signup {
+    width: 100% !important;
+  }
+}
+.item img {
+  border-radius: 20px;
+  height: 350px;
+}
+.item:hover .details {
+  transform: translateY(0);
+  opacity: 1;
+}
+.item .bg-warning.seven-2 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(orange, 72.1%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.eight-6 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(rgb(10, 135, 50), 86.1%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.four-5 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(rgb(255, 13, 0), 45.1%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.nine-1 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(rgb(10, 135, 50), 91.1%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.six-6 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(orange, 66%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.five-5 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(rgb(255, 13, 0), 55.1%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.seven-8 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(orange, 78%, rgb(213, 212, 212) 0deg);
+}
+.item .bg-warning.nine-5 {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, white 72%, transparent 80%, transparent 100%), conic-gradient(rgb(10, 135, 50), 95%, rgb(213, 212, 212) 0deg);
+}
+.item .details {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0px;
+  transition: all 650ms linear;
+  transform: translateY(100%);
+  opacity: 0;
+  border-radius: 20px;
+}
+.item .details .badge {
+  width: 30%;
+}
+
+.gallery {
+  overflow-x: hidden;
+}
+.gallery .filter-item {
+  border: var(--border);
+  color: var(--main-color);
+  cursor: pointer;
+  transition: 1s;
+}
+.gallery .filter-item.active {
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+.gallery .gallery-item {
+  display: none;
+  transition: 2s;
+}
+.gallery .gallery-item .item img {
+  width: 100% !important;
+}
+.gallery .gallery-item.action {
+  display: flex;
+}
+.gallery .gallery-item.show {
+  display: flex;
+  animation: fadeIn 1.5s ease-in-out;
+}
+.gallery .gallery-item.hide {
+  display: none;
+}
+
+.item img {
+  border-radius: 20px;
+  height: 350px;
+}
+.item:hover .movie-detail, .item:hover .show-detail {
+  opacity: 1;
+}
+.item .movie-detail, .item .show-detail {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0px;
+  transition: all 650ms linear;
+  opacity: 0;
+  border-radius: 20px;
+}
+.item .movie-detail .badge, .item .show-detail .badge {
+  width: 30%;
+}
+
+.about-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black), url("../img/about-us/noom-peerapong-2uwFEAGUm6E-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: 80% 40%;
+  background-size: cover;
+  height: 70vh;
+}
+
+.about-img {
+  position: relative;
+}
+.about-img .border-img {
+  width: 290px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  border: 1px solid var(--main-color) !important;
+}
+.about-img img {
+  height: 300px !important;
+}
+
+.card {
+  height: 400px;
+}
+.card .img-team {
+  display: inline-block;
+  overflow: hidden;
+  height: 400px;
+}
+.card .img-team .card-img-top {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: all 650ms ease-in-out;
+}
+.card .img-team:hover > .card-img-top {
+  transform: scale(1.1);
+  transform-origin: 50% 50%;
+}
+
+.contact-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black), url("../img/contact-us/kisspng-short-film-cinema-5ae094030a5392.4436027915246673950423.png");
+  background-repeat: no-repeat;
+  background-position: 80% 30%;
+  background-size: cover;
+  height: 70vh;
+}
+
+form .form-control {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: 0.5s;
+  color: var(--white-color) !important;
+}
+form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+form .form-control:focus {
+  border: 1px solid var(--main-color) !important;
+  box-shadow: none !important;
+}
+form textarea {
+  resize: none;
+}
+
+.plan-header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black), url("../img/pricing-plans/timothy-eberly-dTLlhgeEJWg-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: 80% 40%;
+  background-size: cover;
+  height: 70vh;
+}
+
+.planing-card {
+  position: relative;
+  box-shadow: 5px 5px 15px 5px inset rgb(21, 20, 20);
+}
+.planing-card .planing {
+  position: absolute;
+  width: 90%;
+  top: -30px;
+  left: 15px;
+}
+
+.movie-details {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), black), url("../img/carousel/HD-wallpaper-suzume-no-tojimari-suzume-no-tojimari-2023-movies-netflix-animated-movies-anime-movies.jpg");
+  background-attachment: fixed;
+  min-height: 400px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.movie-details .details h1 {
+  color: var(--white-color);
+}
+.movie-details .details ul {
+  list-style-type: none;
+}
+.movie-details .details ul li {
+  color: var(--white-color);
+  font-size: 1.3rem;
+}
+.movie-details .nav li {
+  font-size: 1.3rem;
+}
+.movie-details .cast img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.related h2 {
+  color: var(--white-color);
+}
+
+.show-details {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), black), url("../img/shows/details/648a556e89488405aac844eb76874220.jpg");
+  background-attachment: fixed;
+  min-height: 400px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.show-details .details h1 {
+  color: var(--white-color);
+}
+.show-details .details ul {
+  list-style-type: none;
+}
+.show-details .details ul li {
+  color: var(--white-color);
+  font-size: 1.3rem;
+}
+.show-details .nav li {
+  font-size: 1.3rem;
+}
+.show-details .cast img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.show-details .cast .cast-info p, .show-details .cast .cast-info h4 {
+  color: var(--white-color) !important;
+}
+
+/*# sourceMappingURL=style.css.map */

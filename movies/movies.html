@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Movies</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo/anime-icon-png-9.jpg">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--  Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--owl css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/owl.carousel.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand order-1 order-lg-0" style="width: 55px;"
+                    href="../assets/img/logo/anime-icon-png-9.jpg"><img src="../assets/img/logo/anime-icon-png-9.jpg"
+                        class="img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Animara</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body w-75">
+                        <ul class="navbar-nav justify-content-lg-start flex-grow-1 p-2 text-uppercase">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../movies/movies.html">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../shows/shows.html">Shows</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">Pages</a>
+                                <ul class="dropdown-menu p-0 w-75">
+                                    <li class="border-bottom"><a class="dropdown-item" href="../pages/about-us.html">About us</a></li>
+
+                                    <li><a class="dropdown-item border-bottom" href="../pages/contact-us.html">contact us</a></li>
+
+                                    <li><a class="dropdown-item" href="../pages/pricing-plans.html">pricing plans</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav d-flex align-items-center py-2 order-1 order-lg-0">
+                    <li class="nav-link text-decoration-none">
+                        <a data-bs-toggle="modal" data-bs-target="#search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link"><a data-bs-toggle="modal" data-bs-target="#login">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" id="search">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0 mt-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="text" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content container">
+                    <div class="modal-header border-0 mt-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                                <a href="#" class="btn btn-primary facebook d-block mx-auto p-3"> <span>Login with
+                                        Facebook</span>
+                                    <i class="fa-brands fa-facebook"></i> </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 col-lg mt-3 mt-md-5 mt-lg-0">
+                                <a href="#" class="btn btn-danger google-plus d-block mx-auto p-3"> Login with
+                                    Google <i class="fa-brands fa-google-plus"></i> </a>
+                            </div>
+                        </div>
+                        <h2 class="text-center my-3">or</h2>
+                        <form action="#">
+                            <div class="mb-3 form-group i-email">
+                                <input type="email" class="form-control p-3 border-0" required="" id="email2"
+                                    placeholder="Email Address *">
+                            </div>
+
+                            <div class="mb-3 form-group i-password">
+                                <input type="password" class="form-control p-3 border-0" required="" id="password2"
+                                    placeholder="Password *">
+                            </div>
+
+                            <div class="login_remember_box my-3 d-flex justify-content-between">
+                                <div class="form-check">
+                                    <label class="form-check-label">Remember me</label>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1"
+                                        value="something">
+                                </div>
+                                <a href="#" class="forget_password text-danger">
+                                    Forgot Password
+                                </a>
+                            </div>
+                            <button type="submit" class="btn btn-primary my-3 p-3 d-block w-100">Login</button>
+
+                        </form>
+                        <hr class="my-4">
+                        <div class="login_message text-center">
+                            <p>Don&rsquo;t have an account ? <a href="../user/signup.html"> Sign up </a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container gallery" style="margin-top:100px">
+        <div class=" gallery-filter d-flex justify-content-around flex-wrap p-3 my-4  mx-auto">
+            <div class="filter-item active show p-2" data-filter="action">Action</div>
+            <div class="filter-item p-2" data-filter="horror">Horror</div>
+            <div class="filter-item p-2" data-filter="drama">Drama</div>
+            <div class="filter-item p-2" data-filter="comedy">Comedy</div>
+            <div class="filter-item p-2" data-filter="romance">Romance</div>
+            <div class="filter-item p-2" data-filter="crime">Crime</div>
+            <div class="filter-item p-2" data-filter="fantazy">Fantazy</div>
+        </div>
+
+        <div class="row action my-5 gallery-item" id="action">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                    <img src="../assets/img/movies/7d7a05b4bbb1f830d39a6003fc7d02e3.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.6</span>
+                    <img src="../assets/img/movies/d0465db0cfc32e74ca6b35c85134cdca.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning five-5">5.5</span>
+                    <img src="../assets/img/movies/8e3087defda95cabff1c117a15448491.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning five-5">5.9</span>
+                    <img src="../assets/img/movies/015f98da12962402e356865346184bec.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row horror my-5 gallery-item" id="horror">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning seven-2">7.2</span>
+                    <img src="../assets/img/movies/2f60d807a7e40d81955f4a322faa6632.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                    <img src="../assets/img/movies/0627c2d7ecc54a6aa7b7f9192e9c43b6.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                    <img src="../assets/img/movies/0cbd634ce5794d5742dcce4171ded97d.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.5</span>
+                    <img src="../assets/img/movies/198a9406aed5163faf863ca9f98e4601.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row romance my-5 gallery-item" id="romance">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning four-5">4.5</span>
+                    <img src="../assets/img/movies/fc6e6d31247e7d0949ba01e2a732a750.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning seven-8">7.8</span>
+                    <img src="../assets/img/movies/fa5b4c6bf7e887b5d4db06d5cdf1708f.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-5">9.7</span>
+                    <img src="../assets/img/movies/f795a0ff4d811effe5835dcc533f9a85.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.5</span>
+                    <img src="../assets/img/movies/e646bb6c11737684edf02dccf3b47c44.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row drama my-5 gallery-item" id="drama">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning four-5">4.7</span>
+                    <img src="../assets/img/movies/d0465db0cfc32e74ca6b35c85134cdca.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning seven-8">7.9</span>
+                    <img src="../assets/img/movies/c586758cd4a45e2ce61e3175a8da9998.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                    <img src="../assets/img/movies/c2897976332570b31a2cdacdaea3690c.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.6</span>
+                    <img src="../assets/img/movies/c20cf7dea496252dcd12e3c7dd2c993f.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row fantazy my-5 gallery-item" id="fantazy">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning seven-2">7.2</span>
+                    <img src="../assets/img/movies/a79af9494ede55370d371a282189e9ca.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning four-5">4.5</span>
+                    <img src="../assets/img/movies/9e3f644a4110d80a3f754772f0d27e36.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning five-5">5.5</span>
+                    <img src="../assets/img/movies/9891a9ae8d523a4a78ee9d83e85de9f7.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.5</span>
+                    <img src="../assets/img/movies/93540ec7e8a6df9cc82cfc142be16649.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row crime my-5 gallery-item" id="crime">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning four-5">4.5</span>
+                    <img src="../assets/img/movies/7d7a05b4bbb1f830d39a6003fc7d02e3.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning seven-8">7.8</span>
+                    <img src="../assets/img/movies/8ab0c0733f22a224c08c36e07cf22bf6.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-5">9.7</span>
+                    <img src="../assets/img/movies/654350542481782f221577eaca017994.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.5</span>
+                    <img src="../assets/img/movies/69ccf4b3cb15a77b297c67a191dcb16d.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row comedy my-5 gallery-item" id="comedy">
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning eight-6">8.6</span>
+                    <img src="../assets/img/movies/452be3a27dcb844abfda0aff993e072e.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                    <img src="../assets/img/movies/28cbb5a07ec4e02124e8460e38f4fe71.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                    <img src="../assets/img/movies/6b5f00b486abf0463028eb95ac89dbaf.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item col-lg-3 col-6 col-md-3 mt-3 mt-lg-0">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning six-6">6.5</span>
+                    <img src="../assets/img/movies/e646bb6c11737684edf02dccf3b47c44.jpg" class="img-fluid" alt="">
+                    <div class="movie-detail d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 my-5">
+        <h2>Recently Added</h2>
+        <hr class="h-border">
+        <div class="owl-carousel owl-theme container movies mt-5">
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/0cbd634ce5794d5742dcce4171ded97d.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning seven-2">7.2</span>
+                    <div class="details d-flex  align-items-start flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-3 mx-auto mt-auto" href="./movie-detail/movie.html"><i
+                                class="fa-regular fa-circle-play text-white"></i>
+                        </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/654350542481782f221577eaca017994.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning eight-6">8.6</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/69ccf4b3cb15a77b297c67a191dcb16d.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning four-5">4.5</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/7d7a05b4bbb1f830d39a6003fc7d02e3.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/8ab0c0733f22a224c08c36e07cf22bf6.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning six-6">6.6</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <span progress="7.21" class="bg-warning five-5">5.5</span>
+                    <img src="../assets/img/movies/8e3087defda95cabff1c117a15448491.jpg" class="me-3" alt="">
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/a79af9494ede55370d371a282189e9ca.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning seven-8">7.8</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="" style="position: relative;">
+                    <img src="../assets/img/movies/d0465db0cfc32e74ca6b35c85134cdca.jpg" class="me-3" alt="">
+                    <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                    <div class="details d-flex flex-column py-5 ps-2">
+                        <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                        <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                        <a class="display-4 mx-auto mt-auto" href="./movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                        <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class=" mt-5 pt-3 text-lg-start px-3 px-lg-0">
+        <div class="row my-5">
+            <div class="col-lg-4 d-flex justify-content-center flex-column px-3">
+                <div class="mx-auto text-center">
+                    <img src="../assets/img/logo/anime-icon-png-9.jpg" class="img-fluid logo" style="width: 70px;"  alt="">
+                    <h2>Animara</h2>
+                </div>
+                
+                <p class="text-secondary px-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  
+                </p>
+                <p class="mt-3 text-center">
+                    <i class="fa-brands fa-facebook me-2"></i>
+                    <i class="fa-brands fa-twitter me-2"></i>
+                    <i class="fa-brands fa-instagram me-2"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </p>
+            </div>
+            <div class="col-lg-2 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <h3>Generes</h3>
+                <ul class="d-flex flex-column text-start">
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">Fantazy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <h3>Contact</h3>
+                <div class="d-flex flex-column">
+                    <div><i class="fa-solid fa-phone pe-2 mb-3"></i> +365-458-3258</div>
+                    <div><i class="fa-solid fa-envelope pe-3 mb-3"></i>animara@gmail.com</div>
+                    <form action="#">
+                        <input type="email" class="form-control mb-3 w-75">
+                        <button type="submit" class="btn btn-outline-primary">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <div class=" d-flex flex-column">
+                    <h3>Help</h3>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+        </div> 
+        <h6 class="text-center text-light mt-3 p-4 ms-0" style="background-color: #100f0f;">©Copyright - All Right Reserved.</h6>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--movie gallery-->
+    <script src="../assets/js/movie-gallery.js"></script>
+    <!--owl js-->
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <!--custom js owl-->
+    <script src="../assets/js/owl.js"></script>
+</body>
+
+</html>

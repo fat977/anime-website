@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animara</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/anime-icon-png-9.jpg">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--  Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--owl css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header style="margin-bottom: 60px;">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand order-1 order-lg-0" style="width: 55px;" href="index.html"><img
+                        src="assets/img/logo/anime-icon-png-9.jpg" class="img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Animara</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body w-75">
+                        <ul class="navbar-nav justify-content-lg-start flex-grow-1 p-2 text-uppercase">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="movies/movies.html">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="shows/shows.html">Shows</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">Pages</a>
+                                <ul class="dropdown-menu p-0 w-75">
+                                    <li class="border-bottom"><a class="dropdown-item" href="./pages/about-us.html">About us</a></li>
+
+                                    <li><a class="dropdown-item border-bottom" href="./pages/contact-us.html">contact us</a></li>
+
+                                    <li><a class="dropdown-item" href="./pages/pricing-plans.html">pricing plans</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav d-flex align-items-center py-2 order-1 order-lg-0">
+                    <li class="nav-link text-decoration-none">
+                        <a data-bs-toggle="modal" data-bs-target="#search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a data-bs-toggle="modal" data-bs-target="#login">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" id="search">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0 mt-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="text" placeholder="Search...">
+                            <button class="btn btn-primary" type="button">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content container">
+                    <div class="modal-header border-0 mt-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                                <a href="#" class="btn btn-primary facebook d-block mx-auto p-3"> <span>Login with
+                                        Facebook</span>
+                                    <i class="fa-brands fa-facebook"></i> </a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 col-lg mt-3 mt-md-5 mt-lg-0">
+                                <a href="#" class="btn btn-danger google-plus d-block mx-auto p-3"> Login with
+                                    Google <i class="fa-brands fa-google-plus"></i> </a>
+                            </div>
+                        </div>
+                        <h2 class="text-center my-3">or</h2>
+                        <form action="#">
+                            <div class=form-group i-email">
+                                <input type="email" class="form-control p-3 border-0" required="" id="email2"
+                                    placeholder="Email Address *">
+                            </div>
+
+                            <div class="mb-3 form-group i-password">
+                                <input type="password" class="form-control p-3 border-0" required="" id="password2"
+                                    placeholder="Password *">
+                            </div>
+
+                            <div class="login_remember_box my-3 d-flex justify-content-between">
+                                <div class="form-check">
+                                    <label class="form-check-label" for="check1">Remember me</label>
+                                    <input class="form-check-input" type="checkbox" id="check1" name="option1"
+                                        value="something" checked>
+                                </div>
+
+                                <a href="#" class="forget_password text-danger">
+                                    Forgot Password
+                                </a>
+                            </div>
+                            <button type="submit" class="btn btn-primary my-3 p-3 d-block w-100">Login</button>
+
+                        </form>
+                        <hr class="my-4">
+                        <div class="login_message text-center">
+                            <p>Don&rsquo;t have an account ? <a href="user/signup.html"> Sign up </a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="owl-carousel top">
+            <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="gradient"></div>
+                    <img src="assets/img/carousel/highest-grossing-anime-films-with-spirited-away-jujutsu-kaisen-0-and-suzume.jpg"
+                        class="img-fluid mt-3" alt="">
+                    <div class="info text-white p-5">
+                        <span class="badge text-bg-warning p-2 mb-3"><b>Top rated</b></span>
+                        <h2>Secret World of Arrietty</h2>
+                        <p class="text-secondary">2022 | 18+ | 2h 30m | Drama</p>
+                        <p class="py-4 w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+                            temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="gradient"></div>
+                    <img src="assets/img/carousel/naruto-and-teammates-fan-art-dbt18qjb7b1cstr1.jpg"
+                        class="img-fluid mt-3" alt="">
+                    <div class="info text-white p-5">
+                        <span class="badge text-bg-warning p-2 mb-3"><b>Top rated</b></span>
+                        <h2>Secret World of Arrietty</h2>
+                        <p class="text-secondary">2022 | 18+ | 2h 30m | Drama</p>
+                        <p class="py-4 w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+                            temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="gradient"></div>
+                    <img src="assets/img/carousel/8gi9oRDHjp_TkzVUzLcGlRgVMEgn2wntDViY2mUZJEs.jpg"
+                        class="img-fluid  mt-3" alt="">
+                    <div class="info text-white p-5">
+                        <span class="badge text-bg-warning p-2 mb-3"><b>Top rated</b></span>
+                        <h2>Secret World of Arrietty</h2>
+                        <p class="text-secondary">2022 | 18+ | 2h 30m | Drama</p>
+                        <p class="py-4 w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+                            temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slider-card">
+                <div class="d-flex justify-content-center align-items-center mb-4">
+                    <div class="gradient"></div>
+                    <img src="assets/img/carousel/chihiro042-1.jpg" class="img-fluid  mt-3" alt="">
+                    <div class="info text-white p-5">
+                        <span class="badge text-bg-warning p-2 mb-3"><b>Top rated</b></span>
+                        <h2>Secret World of Arrietty</h2>
+                        <p class="text-secondary">2022 | 18+ | 2h 30m | Drama</p>
+                        <p class="py-4 w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+                            temporibus quidem magni qui doloribus quasi natus inventore nisi velit minima.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container most-popular my-5">
+        <h2 class="">Most Popular</h2>
+        <hr class="h-border">
+        <div class="w-50 mx-auto">
+           <!--  <div class="btn-group btn-group-lg d-flex justify-content-center" role="tablist"> -->
+                <ul class="nav nav-pills justify-content-center" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#movie">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#show">Shows</a>
+                    </li>
+                </ul>    
+            <!-- </div> -->
+        </div>
+       
+        <div class="tab-content pt-5" id="tab-content">
+            <div class="tab-pane active" id="movie" role="tabpanel" aria-labelledby="simple-tab-0">
+                <div class="owl-carousel owl-theme container movies">
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/0cbd634ce5794d5742dcce4171ded97d.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning seven-2">7.2</span>
+                            <div class="details d-flex  align-items-start flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/654350542481782f221577eaca017994.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning eight-6">8.6</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/69ccf4b3cb15a77b297c67a191dcb16d.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning four-5">4.5</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/7d7a05b4bbb1f830d39a6003fc7d02e3.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/8ab0c0733f22a224c08c36e07cf22bf6.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning six-6">6.6</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <span progress="7.21" class="bg-warning five-5">5.5</span>
+                            <img src="assets/img/movies/8e3087defda95cabff1c117a15448491.jpg" class="me-3" alt="">
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/a79af9494ede55370d371a282189e9ca.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning seven-8">7.8</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/movies/d0465db0cfc32e74ca6b35c85134cdca.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="show" role="tabpanel" aria-labelledby="simple-tab-1">
+                <div class="owl-carousel owl-theme container movies">
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/0a74ba1df4e0727838d406677778a522.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning eight-6">8.6</span>
+                            <div class="details d-flex  align-items-start flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-3 mx-auto mt-auto" href="./details/show.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/24b55c57c74f0a395efc0b2491845230.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning seven-2">7.2</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/2da3fd349915ca64aab573e871e07f30.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning five-5">5.5</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/72f46dbea296dc31902430c4fbd5e583.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning nine-1">9.1</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/79ef8af89cc542ea92ae742d20aec0bd.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning six-6">6.6</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <span progress="7.21" class="bg-warning seven-8">7.8</span>
+                            <img src="assets/img/shows/9328289106439924f2ae515a11735e67.jpg" class="me-3" alt="">
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/9c438e243617179049af58bb06d45e85.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning nine-5">9.5</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="" style="position: relative;">
+                            <img src="assets/img/shows/ea50ff8af09b0512d67cf407e2cc7f1c.jpg" class="me-3" alt="">
+                            <span progress="7.21" class="bg-warning four-5">4.5</span>
+                            <div class="details d-flex flex-column py-5 ps-2">
+                                <span class="badge text-bg-warning p-2 mb-2"><b>Drama</b></span>
+                                <span class="badge text-bg-dark p-2"><b>13+</b></span>
+                                <a class="display-4 mx-auto mt-auto" href="./movies/movie-detail.html"><i class="fa-solid fa-circle-info text-white"></i>
+                                </a>
+                                <h5 class="text-center text-white mt-auto mx-auto">Your Name</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-5 pt-3 text-lg-start px-3 px-lg-0">
+        <div class="row my-5">
+            <div class="col-lg-4 d-flex justify-content-center flex-column px-3">
+                <div class="mx-auto text-center">
+                    <img src="assets/img/logo/anime-icon-png-9.jpg" class="img-fluid logo" style="width: 70px;"  alt="">
+                    <h2>Animara</h2>
+                </div>
+                
+                <p class="text-secondary px-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  
+                </p>
+                <p class="mt-3 text-center">
+                    <i class="fa-brands fa-facebook me-2"></i>
+                    <i class="fa-brands fa-twitter me-2"></i>
+                    <i class="fa-brands fa-instagram me-2"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </p>
+            </div>
+            <div class="col-lg-2 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <h3>Generes</h3>
+                <ul class="d-flex flex-column text-start">
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <li><a href="#">Fantazy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <h3>Contact</h3>
+                <div class="d-flex flex-column">
+                    <div><i class="fa-solid fa-phone pe-2 mb-3"></i> +365-458-3258</div>
+                    <div><i class="fa-solid fa-envelope pe-3 mb-3"></i>animara@gmail.com</div>
+                    <form action="#">
+                        <input type="email" class="form-control mb-3 w-75">
+                        <button type="submit" class="btn btn-outline-primary">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 mt-4 mt-lg-0 ps-3 ps-lg-0">
+                <div class=" d-flex flex-column">
+                    <h3>Help</h3>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact us</a>
+                </div>
+            </div>
+        </div> 
+        <h6 class="text-center text-light mt-3 p-4 ms-0" style="background-color: #100f0f;">©Copyright - All Right Reserved.</h6>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--owl js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--custom js owl-->
+    <script src="assets/js/owl.js"></script>
+</body>
+
+</html>

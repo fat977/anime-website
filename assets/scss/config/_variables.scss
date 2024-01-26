@@ -1,0 +1,24 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --white-color: #FFF;
+    --black-color: #1e1d1d;
+    --main-color: #549bf7;
+    --input-color:#fafafa;
+    ;
+
+    /*========== transition ==========*/
+    --transition: all .2s ease-out;
+
+    /*========== shadows ==========*/
+    --box-shadow: 0 0 35px 0 rgba(49, 57, 66, 0.5);
+
+    /*========== Font and typography ==========*/
+    --primary-font: 'Orbitron', sans-serif;
+    --second-font:  'Roboto Slab', serif;
+   
+
+   
+}

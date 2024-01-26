@@ -1,0 +1,11 @@
+@mixin form {
+    
+    background-color: var(--input-color) !important;
+    color: var(--main-color) !important;
+    border-radius: 0;
+    &:focus{
+        border: 1px solid var(--main-color) !important;
+        
+    }
+
+}

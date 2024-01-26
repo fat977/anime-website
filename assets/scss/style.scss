@@ -1,0 +1,22 @@
+@import "config/hr-border";
+@import "base/base";
+@import "config/form";
+
+@import "base/header";
+@import "base/footer";
+
+
+@import "config/variables";
+@import "config/fade";
+@import "config/owl-sliders";
+@import "config/rating";
+
+
+@import "components/user/signin-signup";
+@import "components/main-content";
+@import "components/pages/movies-shows";
+@import "components/pages/about";
+@import "components/pages/contact";
+@import "components/pages/pricing-plans";
+@import "components/pages/details";
+

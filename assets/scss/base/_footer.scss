@@ -1,0 +1,31 @@
+@media screen and (max-width: 764px) {
+    .logo{
+        width: 100px !important;
+        height: 100px;
+        border-radius: 50%;
+        
+    }
+}
+footer{
+    overflow-x: hidden;
+
+    p i:hover{
+        color: var(--main-color);
+    }
+
+    ul li{
+        list-style-type: none;
+    }
+
+    a{
+        text-decoration: none;
+        &:hover{
+            color: var(--main-color) !important;
+        }
+    }
+
+    p,i,a,h3,div{
+        color: var(--white-color);
+    }
+
+}

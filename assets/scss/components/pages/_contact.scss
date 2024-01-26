@@ -1,0 +1,33 @@
+.contact-header{
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), black),
+        url("../img/contact-us/kisspng-short-film-cinema-5ae094030a5392.4436027915246673950423.png");
+    background-repeat: no-repeat;
+    background-position: 80% 30%;
+    background-size: cover;
+    height: 70vh;
+}
+
+form {
+    .form-control{
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        transition: 0.5s;
+        
+        color: var(--white-color) !important;
+    
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.2) !important;
+        }
+    
+        &:focus{
+            border: 1px solid var(--main-color) !important;
+            box-shadow: none !important;
+        }
+    }
+
+    textarea{
+        resize: none;
+    }
+    
+}
